@@ -7,10 +7,13 @@
 config {
   type: "view", // Creates a view in BigQuery. Try changing to "table" instead.
   columns: {
-    test: "A description for the test column", // Column descriptions are pushed to BigQuery.
+    zipcode: "The zip code", // Column descriptions are pushed to BigQuery.
   }
 }
 
--- The rest of a SQLX file contains your SELECT statement used to create the table.
-
-SELECT 1 as test
+SELECT
+  zipcode,
+  population,
+  gender
+FROM
+  `bigquery-public-data.census_bureau_usa.population_by_zip_2010`

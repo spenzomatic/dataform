@@ -12,7 +12,8 @@ SELECT
   gender,
   2010 AS census_year
 FROM
-  `bigquery-public-data.census_bureau_usa.population_by_zip_2010` UNION
+  `bigquery-public-data.census_bureau_usa.population_by_zip_2010` 
+UNION ALL
 SELECT
   zipcode,
   population,
